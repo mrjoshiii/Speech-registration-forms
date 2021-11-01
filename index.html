@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration form using voice commands.(Click on the mic icon to input in the form) </div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('fname')"> First Name* </span>
+                        <input type="text" id="fname" placeholder="Enter your first name" required>
+
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('mname')">Middle Name</span>
+                        <input type="text" id="mname" placeholder="Enter your middle name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('lname')">Last Name*</span>
+                        <input type="text" id="lname" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('uname')">Username*</span>
+                        <input type="text" id="uname" placeholder="Create your username" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('dob')">Date of birth*</span>
+                        <input type="date" id="dob" placeholder="Date of birth" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('age')">Age*</span>
+                        <input type="number" id="age" placeholder="Your age must be less than 32" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('adr1')">Address-1*</span>
+                        <input type="textarea" id="adr1" placeholder="Address line 1" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('adr2')">Address-2</span>
+                        <input type="textarea" id="adr2" placeholder="If same, type same" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('street')">Street*</span>
+                        <input type="textarea" id="street" placeholder="Street" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('area')">Area & locality*</span>
+                        <input type="textarea" id="area" placeholder="Area & locality" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('pin')">PIN Code*</span>
+                        <input type="number" id="pin" placeholder="Pin code" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('city')">City*</span>
+                        <input type="textarea" id="city" placeholder="City name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('state')">State*</span>
+                        <input type="textarea" id="state" placeholder="State name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('country')">Country*</span>
+                        <input type="textarea" id="country" placeholder="Country name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('mail')">Email*</span>
+                        <input type="email" id="mail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('mob')">Phone Number*</span>
+                        <input type="number" id="mob" placeholder="Enter your number*" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('pwd')">Password*</span>
+                        <input type="password" id="pwd" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('cpwd')">Confirm Password*</span>
+                        <input type="password" id="cpwd" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> <img src="/icons8-block-microphone (1).gif" alt="" srcset=""
+                                onclick="startDictation('txt1')">Why you want to join us?*</span>
+                        <input type="textarea" id="text1" class="textarea1" placeholder=" Write here" required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+                <div class="button">
+                    <input type="reset" value="Clear form">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+    function startDictation(x) {
+
+        //  <img src="mike.jpg" width="40px" onclick="startDictation('name')">
+        // id name
+
+
+        if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+            var recognition = new webkitSpeechRecognition();
+
+            recognition.continuous = false;
+            recognition.interimResults = false;
+
+            recognition.lang = "en-Us";
+            recognition.start();
+            recognition.onresult = function (e) {
+                if (x == "pin" || x == "mob" || x=="dob") {
+                    document.getElementById(x).value = parseInt(e.results[0][0].transcript);
+                    recognition.stop();
+                }
+                else {
+                    document.getElementById(x).value = e.results[0][0].transcript;
+                    recognition.stop();
+                }
+            };
+
+            recognition.onerror = function (e) {
+                recognition.stop();
+            }
+
+        }
+
+
+    }
+</script>
+
+
+
+</html>
+</body>
+
+</html>
